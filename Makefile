@@ -45,7 +45,7 @@ endif
 _build:
 	@echo "=> building doctl via go build"
 	@echo ""
-	@OUT_D=${OUT_D} GOOS=${GOOS} GOARCH=${GOARCH} scripts/_build.sh
+	@OUT_D=${OUT_D} GOOS=${GOOS} GOARCH=${GOARCH} chmod +x scripts/_build.sh
 	@echo "built $(OUT_D)/doctl_$(GOOS)_$(GOARCH)"
 
 .PHONY: build
