@@ -15,7 +15,6 @@ package do
 
 import (
 	"context"
-	"github.com/digitalocean/doctl/demo"
 	"github.com/digitalocean/doctl/godo"
 )
 
@@ -49,7 +48,6 @@ func NewAccountService(godoClient *godo.Client) AccountService {
 }
 
 func (as *accountService) Get() (*Account, error) {
-	demo.Hello()
 	godoAccount, _, err := as.client.Account.Get(context.TODO())
 	if err != nil {
 		return nil, err
