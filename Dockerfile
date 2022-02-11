@@ -29,7 +29,7 @@ RUN apk add --update --no-cache \
 WORKDIR /app
 COPY --from=build /out/doctl /app/doctl
 
-#RUN adduser -D user
-#USER user:user
+RUN adduser -D user
+USER user:user
 
 ENTRYPOINT ["/app/doctl"]
